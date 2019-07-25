@@ -10,6 +10,7 @@ import compression from 'compression';
 import helmet from 'helmet';
 import cors from 'cors';
 import router from './routes';
+import models from './database/models';
 
 const isProduction = process.env.NODE_ENV === 'production';
 
@@ -84,6 +85,9 @@ app.use((err, req, res, next) => {
     status: false,
   });
 });
+
+//check and sync database
+models.sequelize.sync();
 
 // configure port and listen for requests
 const port = parseInt(process.env.NODE_ENV === 'test' ? 8378 : process.env.PORT, 10) || 80;

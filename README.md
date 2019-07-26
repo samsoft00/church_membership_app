@@ -1,13 +1,8 @@
-# Turing Back End Challenge
-To complete this challenge, you need to ensure all route returns a similar response object as described in our API guide.
-To achieve this goal
-- You will have to fix the existing bugs
-- Implement the incomplete functions,
-- Add test cases for the main functions of the system.
-- Add Dockerfile to the root of the project to run the app in docker environment
-
+# Church Membership API
 
 ## Getting started
+
+## Endpoint (API)
 
 ### Prerequisites
 
@@ -29,11 +24,6 @@ In order to install and run this project locally, you would need to have the fol
 ```sh
 cp .env.sample .env
 ```
-* Create a MySQL database and run the `sql` file in the database directory to migrate the database
-
-```sh
-mysql -u <dbuser> -D <databasename> -p < ./src/database/database.sql
-```
 
 * Run `npm run dev` to start the app in development
 
@@ -41,10 +31,7 @@ mysql -u <dbuser> -D <databasename> -p < ./src/database/database.sql
 
 * Build image
 
-`docker build -t node_challenge .`
+`docker build -t church_app .`
 
 * Run container
-`docker run --rm -p 8000:80 node_challenge`
-
-## Request and Response Object API guide for all Endpoints
-Check [here](https://docs.google.com/document/d/1J12z1vPo8S5VEmcHGNejjJBOcqmPrr6RSQNdL58qJyE/edit?usp=sharing)
+`docker run --rm -p 8000:80 church_app`

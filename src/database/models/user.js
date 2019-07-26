@@ -44,7 +44,6 @@ module.exports = (sequelize, DataTypes) => {
     country: DataTypes.STRING(100),
 
     day_phone: DataTypes.STRING(100),
-    eve_phone: DataTypes.STRING(100),
     mob_phone: DataTypes.STRING(100),
   }, {
     underscored: true,
